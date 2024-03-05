@@ -1,0 +1,54 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  .noticias ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .noticias li {
+    margin-bottom: 10px;
+  }
+  
+  .precios table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .precios th, .precios td {
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  .precios th {
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
