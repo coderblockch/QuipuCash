@@ -1,53 +1,56 @@
-# QuipuCash
+# 🪙 QuipuCash
 
-A lightweight cryptocurrency dashboard that shows crypto market news, a price table, and a price chart in a clean, zero-build interface. Built with plain HTML, CSS, and vanilla JavaScript.
+A static, Spanish-language landing page for cryptocurrency news and prices, built with semantic HTML and plain CSS. It was one of my first front-end projects: the goal was to practice page structure, tables, and basic styling.
 
-> The UI is in Spanish (the project's original language).
+🔗 **[Live Demo](https://coderblockch.github.io/QuipuCash/)**
 
 ![QuipuCash screenshot](docs/screenshot.png)
 
 ## Features
 
-- **News section** ("Noticias") with the latest crypto headlines.
-- **Price table** ("Precios") listing cryptocurrencies with USD price and 24h variation.
-- **Price chart** ("Gráfico de Precios") rendered with [Chart.js](https://www.chartjs.org/).
-- **Zero build step** — just open the file or serve the folder.
+- Header, main content, and footer laid out with semantic HTML (`header`, `main`, `section`, `footer`)
+- **News** section with a list of crypto headlines
+- **Prices** table for Bitcoin, Ethereum, and Cardano with price (USD) and 24h change
+- Simple, readable styling with a dark header and footer
+
+> **Note:** The headlines and prices are sample data written directly in the HTML. They are not fetched from an API.
 
 ## Tech Stack
 
 - HTML5
 - CSS3
-- JavaScript (ES6+)
-- [Chart.js 4](https://www.chartjs.org/) (loaded from CDN)
+- JavaScript (`quipu.js`, an early draft of a price chart; see Roadmap)
 
 ## Run Locally
+
+No build step or dependencies. Open `index.html` in your browser, or serve the folder:
 
 ```bash
 git clone https://github.com/coderblockch/QuipuCash.git
 cd QuipuCash
-
-# Serve it with any static server, e.g. Python:
 python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
-You can also open `index.html` directly in a browser. Serving over HTTP is recommended so the Chart.js CDN script loads reliably.
-
 ## Project Structure
 
 ```
-index.html   # Markup and page structure
-style.css    # Styling
-quipu.js     # App logic and chart rendering
-docs/        # Screenshots used in this README
+QuipuCash/
+├── index.html   # page markup: news list and prices table
+├── style.css    # styles
+├── quipu.js     # draft chart script (work in progress)
+└── docs/
+    └── screenshot.png
 ```
 
-## Data & Configuration
+## Roadmap
 
-The prices shown are **static demo data** defined in `quipu.js` (`obtenerPrecios`). No API key or secret is required to run the app.
+- [ ] Load live prices from a public crypto API (e.g. CoinGecko) instead of sample data
+- [ ] Finish the price chart in `quipu.js` (it still needs a data-fetching function and the Chart.js library)
+- [ ] Make the news links point to real articles
 
-To display live prices, replace the body of `obtenerPrecios()` with a `fetch` call to a public crypto API (for example [CoinGecko](https://www.coingecko.com/en/api)), returning an array of `{ nombre, precio }` objects. If your chosen API requires a key, keep it out of source control (use an environment variable or a config file listed in `.gitignore`) — never hardcode secrets.
+For a finished, API-driven version of this idea, see my **[Crypto Dashboard](https://github.com/coderblockch/crypto-dashboard)**.
 
-## License
+## Author
 
-[MIT](LICENSE) © coderblockch
+**David Jimenez**, Sacramento, CA · [GitHub @coderblockch](https://github.com/coderblockch) · [Portfolio](https://portfolio-bay-nine-59.vercel.app)
