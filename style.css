@@ -44,6 +44,15 @@ body {
   .precios th {
     text-align: center;
   }
+
+  .grafico-seccion {
+    max-width: 700px;
+  }
+
+  .grafico {
+    width: 100%;
+    max-height: 400px;
+  }
   
   footer {
     background-color: #333;
